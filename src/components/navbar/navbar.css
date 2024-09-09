@@ -1,0 +1,227 @@
+.navbar {
+  background-color: white;
+  padding-left: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.drawer {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -280px; /* Hidden by default */
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  transition: left 0.3s ease;
+}
+
+.drawer.open {
+  left: 0; /* Slide in when open */
+}
+
+.drawer h2 {
+  margin-top: 0;
+  cursor: pointer;
+}
+.drawer h2:hover {
+  color: rgb(124, 124, 237);
+  transition: 1s;
+}
+
+.drawer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.drawer ul li {
+ 
+  margin-right: 15px;
+  transition: transform 0.5s, background-color 0.3s;
+  border-radius: 10px;
+}
+
+.drawer ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+  transition: color 0.3s;
+}
+.drawer ul li:hover {
+  transform: scale(1.1); /* Expand only the hovered item */
+  background-color: lightgray; /* Optional background change for the hovered item */
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+.drawer ul li:hover a {
+  color: blue; /* Change the text color to blue for the hovered item */
+}
+.main-content {
+  margin-left: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #005f6b;
+}
+.hamburger-menu {
+  width: 35px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  display: block;
+  height: 4px;
+  background-color: black;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu span:nth-child(1) {
+  width: 100%;
+}
+
+.hamburger-menu span:nth-child(2) {
+  width: 80%;
+}
+
+.hamburger-menu span:nth-child(3) {
+  width: 60%;
+}
+
+.hamburger-menu:hover span {
+  background-color: blue;
+}
+
+.imgd {
+  height: 30px;
+  margin-left: 1rem;
+  padding-left: 10px;
+  transition: 1s;
+}
+.search-container {
+
+  align-items: center;
+  justify-content: center;
+  padding-left: 100px;
+  transition: 1s;
+}
+
+
+.search-container input[type="text"] {
+  width: 150px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 25px 0 0 25px;
+  outline: none;
+  font-size: 16px;
+  transition: border 0.3s, width 0.3s;
+}
+
+.search-container input[type="text"]:focus {
+  border-color: #007BFF;
+}
+
+.search-container button {
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 1s;
+ 
+}
+
+.search-container button:hover {
+  background-color: #0056b3;
+}
+
+.search-container button:active {
+  background-color: #003f7f;
+}
+
+/* Media Queries for responsiveness */
+
+/* For mobile screens (up to 600px) */
+@media (max-width: 600px) {
+  .search-container input[type="text"] {
+    width: 150px;  /* Even smaller width for very small screens */
+    padding: 7px;
+    font-size: 12px;
+    transition: 1s;
+  }
+  
+  .search-container button {
+    padding: 7px;
+    font-size: 12px;
+    transition: 1s;
+  }
+}
+
+/* For very small screens (up to 400px) */
+@media (max-width: 400px) {
+  .search-container input[type="text"] {
+    width: 150px;  /* Even smaller width for very small screens */
+    padding: 7px;
+    font-size: 12px;
+    transition: 1s;
+  }
+  
+  .search-container button {
+    padding: 7px;
+    font-size: 12px;
+    transition: 1s;
+  }
+}
+
+/* For large screens (over 1200px) */
+@media (min-width: 1200px) {
+  .imgd {
+    height: 50px;
+    margin-left: 1rem;
+    padding-left: 10px;
+    transition: 1s;
+    
+  }
+  .search-container {
+    padding-left: 300px;
+    transition: 1s;
+  }
+  .search-container input[type="text"] {
+    width: 200px;  /* Larger width for bigger screens */
+    padding: 7px;
+    font-size: 12px;
+    transition: 1s;
+  }
+
+  .search-container button {
+    padding: 7px;
+    font-size: 12px;
+    transition: 1s;
+  }
+  
+}
+
