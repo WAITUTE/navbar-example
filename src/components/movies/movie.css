@@ -1,0 +1,178 @@
+.all{
+    padding-left: 5px;
+    padding-top: 10px;
+    display: flex;
+}
+.movies-container {
+   
+    width: 75%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of items to fit smaller screens */
+     /* Center items on smaller screens */
+    
+}
+
+.movie-card {
+    width: 200px; /* Default width */
+    height: 300px; /* Default height */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease;
+    cursor: pointer;
+    margin: 10px; /* Margin around each card */
+    position: relative; /* Make sure description is positioned correctly */
+}
+
+.movie-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+.movie-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.movie-description {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.movie-card:hover .movie-description {
+    opacity: 1; /* Reveal the description on hover */
+}
+
+.movie-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) { /* Tablet */
+    .movie-card {
+        width: 180px;
+        height: 270px;
+    }
+
+    .movie-title {
+        font-size: 14px;
+    }
+
+    .movie-description {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px) { /* Small tablets and large phones */
+    .movie-card {
+        width: 160px;
+        height: 240px;
+    }
+
+    .movie-title {
+        font-size: 12px;
+    }
+
+    .movie-description {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) { /* Phones */
+    .movie-card {
+        width: 140px;
+        height: 210px;
+    }
+
+    .movie-title {
+        font-size: 11px;
+    }
+
+    .movie-description {
+        font-size: 10px;
+    }
+}
+/* Drawers Section */
+.movie-popular {
+    width: 20%;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.drawers {
+    border-radius: 10px;
+    background-color: rgb(99, 94, 239);
+    padding-left: 10px;
+    width: 100%;
+}
+
+.drawers h2 {
+    color: rgb(246, 246, 248);
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) { /* Tablet */
+    .movie-card {
+        width: 180px;
+        height: 270px;
+    }
+
+    .movie-title {
+        font-size: 14px;
+    }
+
+    .movie-description {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) { /* Small tablets and large phones */
+    .all {
+        flex-direction: column; /* Stack content vertically */
+    }
+
+    .movies-container, .movie-popular {
+        width: 100%; /* Full width */
+        margin-bottom: 20px; /* Space between sections */
+    }
+
+    .drawers h2 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) { /* Phones */
+    .movie-card {
+        width: 140px;
+        height: 210px;
+    }
+
+    .movie-title {
+        font-size: 11px;
+    }
+
+    .movie-description {
+        font-size: 10px;
+    }
+
+    .drawers h2 {
+        font-size: 14px;
+    }
+}
