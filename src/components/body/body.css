@@ -1,0 +1,41 @@
+.Body {
+    padding-left: 0.5px;
+    width: 100%;
+    position: relative;
+    overflow: hidden; /* Ensure content doesn't overflow out of the container */
+
+    .Arrow {
+        width: 40px;
+        height: 50px;
+        background-color: rgba(22, 22, 22, 0.5); /* Use rgba for transparency */
+        color: rgb(247, 247, 247);
+        position: absolute;
+        z-index: 90;
+        top: 50%;
+        transform: translateY(-50%); /* Center arrow vertically */
+        margin: auto;
+        cursor: pointer;
+
+        &.left {
+            left: 20px;
+        }
+
+        &.right {
+            right: 20px;
+        }
+    }
+
+    .view {
+        display: flex;
+        transition: transform 0.5s ease; /* Smooth sliding effect */
+
+        .imgd {
+            padding-left: 0px;
+            width: 550px;
+            height: 300px;
+            border-radius: 20px;
+            flex-shrink: 0; /* Prevent images from shrinking */
+            margin-right: 2px; /* Space between images */
+        }
+    }
+}
